@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<title>Show Sort Algorithms</title>
+	
+	</head>
+
+	<body>
+	
+		<div class = "sort-visualization">
+		
+			<div class = "sort-visualization-options">
+			
+			
+				<div class = "sort-visualization-options-section">
+			
+					<input id = "action-delay-input" type = "number" min = "25" max = "1000" value = "100"
+					onkeyup = "if(this.value < 0) {this.value = this.value * -1}
+								if(this.value > 1000) {this.value = 1000}
+								if(this.value < 25) {this.value = 25}">
+					</input>
+					<button id = "set-action-delay-button" onclick = "setActionDelayBtn()">Set Action Delay(ms)</button>
+			
+				</div>
+		
+				<div class = "sort-visualization-options-section">
+			
+					<input id = "array-size-input" type = "number" min = "10" max = "100" 
+					onkeyup = "if(this.value < 0) {this.value = this.value * -1}
+								if(this.value > 100) {this.value = 100}
+								if(this.value < 10) {this.value = 10}">
+					</input>
+					<button id = "set-array-size-button" onclick = "setArraySizeBtn()">Set Array Size</button>
+			
+				</div>
+				
+				<div class = "sort-visualization-options-section">
+			
+					<label for = "sorting-algorithms">Choose Sorting Algorithm:</label>
+					
+					<select id = "sorting-algorithms">
+					
+						<option value = "bubble-sort">Bubble Sort</option>
+						<option value = "insertion-sort">Insertion Sort</option>
+						<option value = "selection-min-sort">Selection Min Sort</option>
+						<option value = "selection-max-sort">Selection Max Sort</option>
+						<option value = "min-max-sort">Min-Max Sort</option>
+						<option value = "shell-sort">Shell Sort</option>
+						<option value = "quick-sort">Quick Sort</option>
+						
+					</select>
+
+				</div>
+			
+				<div class = "sort-visualization-options-section">
+			
+					<button id = "sort-button" onclick = "sortBtn()">Sort Array</button>
+			
+				</div>
+				
+				<div class = "sort-visualization-options-section">
+			
+					<label for = "time-elapsed">Time Elapsed:</label>
+					<span id = "time-elapsed"></span>
+					
+				</div>
+				
+			
+			</div>
+		
+			<div class = "sort-visualization-frame">
+		
+				<div class = "row">
+				
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</body>
+
+	<meta charset = "UTF-8">
+	<script type="text/javascript" src="arrShow.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	
+</html>
